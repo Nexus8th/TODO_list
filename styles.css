@@ -1,0 +1,128 @@
+/* ROOT */
+:root {
+  text-decoration: none;
+}
+
+/* ALL (*) */
+/* HTML */
+html {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* BODY */
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* HEADER */
+.header-container {
+  position: relative;
+}
+
+.header-box {
+  position: relative;
+  border: 2px solid black;
+}
+
+.header-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+.header-bg {
+  position: relative;
+  border: 2px solid black;
+}
+
+/* MAIN CONTENT */
+main {
+  position: relative;
+  width: 100%;
+  height: 49rem;
+}
+
+.todo-list-container {
+  position: relative;
+  width: 50%;
+  height: 35rem;
+  border: 2px solid black;
+  margin: 25%;
+  margin-top: 5%;
+  margin-bottom: 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-list-heading {
+  position: relative;
+  display: flex;
+  width: auto;
+  height: 4rem;
+  justify-content: center;
+  margin: 0;
+  border: 2px solid black;
+}
+
+.todo-list-form {
+  position: relative;
+  width: auto;
+}
+
+.todo-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.actions {
+  position: relative;
+  display: flex;
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  width: auto;
+  height: 4rem;
+  margin: 0;
+}
+
+.footer-container {
+  position: relative;
+  display: flex;
+  border: 2px solid black;
+  width: auto;
+  height: 100%;
+  bottom: 0;
+  margin: 0;
+}
+
+.nav-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  bottom: 0;
+}
+
+.nav-list {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: inline-flex;
+  list-style-type: none;
+}
+
+.nav-list-content {
+  position: relative;
+  width: auto;
+  height: auto;
+}/*# sourceMappingURL=styles.css.map */
