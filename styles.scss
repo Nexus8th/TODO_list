@@ -1,9 +1,20 @@
                    /* ROOT */
 :root {
     text-decoration: none;
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --gray: #6b7280;
+    --light: #eee;
+    --blue: #3b12d1;
+    --purple: #8b5cf6;
 }  
                /* ALL (*) */
-
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
 
 
                   /* HTML */
@@ -18,9 +29,14 @@ html {
                   /* BODY */
 body {
     position: relative;
+    display: block;
     width: 100%;
     height: 100%;
     margin: 0;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--darkest);
+    color: var(--light);
 }
 
 
@@ -51,14 +67,17 @@ body {
 main {
     position: relative;
     width: 100%;
-    height: 49rem;
+    height: 52.3rem;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 .todo-list-container {
     position: relative;
-    width: 50%;
-    height: 35rem;
+    width: 70%;
+    height: 65vh;
     border: 2px solid black;
-    margin: 25%;
+    margin: auto;
     margin-top: 5%;
     margin-bottom: 0%;
     display: flex;
@@ -75,12 +94,102 @@ main {
 }
 .todo-list-form {
     position: relative;
+    display: flex;
     width: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 1rem;
+}
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+.todo-list-input {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.25rem;
+}
+.todo-list-input::placeholder {
+    color: var(--gray);
+}
+.todo-list-input-btn {
+    color: var(--blue);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.todo-list-input-btn:hover {
+    opacity: 0.8;
+}
+.todo-list-input-btn:active {
+    opacity: 0.6;
 }
 .todo-list {
     position: relative;
     display: flex;
     flex-direction: column;
+    padding: 1rem;
+}
+.todo-list h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--gray);
+    margin-bottom: 1rem;
+}
+#tasks .task {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+#tasks .task .content .text {
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+#tasks .task .content .text:not(:read-only) {
+    color: car(--blue);
+}
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+.task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+.task .actions button:hover {
+    opacity: 0.8;
+}
+.task .actions button:active {
+    opacity: 0.6;
+}
+.task .actions .edit {
+    background-image: linear-gradient(to right, var(--blue), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.task .actions .delete {
+    color: crimson;
 }
 .actions {
     position: relative;
