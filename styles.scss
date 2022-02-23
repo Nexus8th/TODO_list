@@ -3,11 +3,11 @@
     text-decoration: none;
     --dark: #374151;
     --darker: #1F2937;
-    --darkest: #111827;
+    --darkest: #121a2b;
     --gray: #6b7280;
     --light: #eee;
-    --blue: #3b12d1;
-    --purple: #8b5cf6;
+    --blue: #4512d1;
+    --cyan: #51dad3;
 }  
                /* ALL (*) */
 * {
@@ -29,9 +29,9 @@ html {
                   /* BODY */
 body {
     position: relative;
-    display: block;
+    display: flex;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     flex-direction: column;
     min-height: 100vh;
@@ -42,6 +42,10 @@ body {
 
 
                     /* HEADER */
+header {
+    position: relative;
+    min-height: 50px;
+}
 .header-container{
     position: relative;
 }
@@ -67,7 +71,8 @@ body {
 main {
     position: relative;
     width: 100%;
-    height: 52.3rem;
+    height: auto;
+    min-height: auto;
     padding: 2rem 1rem;
     max-width: 800px;
     margin: 0 auto;
@@ -75,22 +80,26 @@ main {
 .todo-list-container {
     position: relative;
     width: 70%;
-    height: 65vh;
+    height: auto;
+    min-height: auto;
     border: 2px solid black;
     margin: auto;
     margin-top: 5%;
     margin-bottom: 0%;
     display: flex;
     flex-direction: column;
+    border-radius: 1rem;
 }
 .todo-list-heading {
     position: relative;
     display: flex;
     width: auto;
-    height: 4rem;
+    height: 6rem;
     justify-content: center;
     margin: 0;
+    padding-top: 1.75rem;
     border: 2px solid black;
+    
 }
 .todo-list-form {
     position: relative;
@@ -99,6 +108,7 @@ main {
     margin-left: 1rem;
     margin-right: 1rem;
     border-radius: 1rem;
+    margin-top: 1rem;
 }
 input, button {
     appearance: none;
@@ -122,7 +132,7 @@ input, button {
     color: var(--blue);
     font-size: 1.25rem;
     font-weight: 700;
-    background-image: linear-gradient(to right, var(--blue), var(--purple));
+    background-image: linear-gradient(to right, var(--blue), var(--cyan));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
@@ -145,6 +155,8 @@ input, button {
     font-weight: 400;
     color: var(--gray);
     margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-left: 0.75rem;
 }
 #tasks .task {
     position: relative;
@@ -184,7 +196,7 @@ input, button {
     opacity: 0.6;
 }
 .task .actions .edit {
-    background-image: linear-gradient(to right, var(--blue), var(--purple));
+    background-image: linear-gradient(to right, var(--blue), var(--cyan));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -201,17 +213,18 @@ input, button {
                   /* FOOTER */
 footer {
     position: relative;
-    width: auto;
+    width: 100%;
     height: 4rem;
-    margin: 0;
+    min-height: 50px;
+    bottom: 0;
+    margin-top: auto;
+    border: 2px solid rgb(255, 0, 0);
 }
 .footer-container {
     position: relative;
-    display: flex;
     border: 2px solid black;
     width: auto;
     height: 100%;
-    bottom: 0;
     margin: 0;
 }
 .nav-box {
@@ -219,7 +232,6 @@ footer {
     width: 100%;
     height: 100%;
     margin: 0;
-    bottom: 0;
 }
 .nav-list {
     position: relative;
