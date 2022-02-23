@@ -1,3 +1,7 @@
+localStorage.setItem('form', 'input', 'list_el', () => {
+    const save = localStorage.getItem('form', 'input', 'list_el')
+})
+
 window.addEventListener('load', () => {
     const form = document.querySelector(".todo-list-form")
     const input = document.querySelector(".todo-list-input")
@@ -7,11 +11,6 @@ window.addEventListener('load', () => {
         e.preventDefault();
         
         const task = input.value;
-        
-        if (!task) {
-            
-            return;
-        }
         
         const task_el = document.createElement("div");
         task_el.classList.add("task");
@@ -40,9 +39,29 @@ window.addEventListener('load', () => {
         const task_delete_el = document.createElement("button");
         task_delete_el.classList.add("delete");
         task_delete_el.innerHTML = "Supprimer"
-        console.log(task_edit_el, task_delete_el);
+        
+        task_actions_el.appendChild(task_edit_el);
+        task_actions_el.appendChild(task_delete_el);
+
+        task_el.appendChild(task_actions_el);
 
         list_el.appendChild(task_el);
-    })
 
-})
+        input.value = "";
+
+        task_edit_el.addEventListener('click', () => {
+            if (task_edit_el.innerText.toLowerCase() == "editer") {
+                task_input_el.removeAttribute("readonly");
+                task_input_el.focus();
+                task_edit_el.innerText = "Enregistrer";
+            }
+            else {
+                task_input_el.setAttribute("readonly", "readonly");
+                task_edit_el.innerText = "Editer"
+            }
+        });
+        task_delete_el.addEventListener('click', () => {
+            list_el.removeChild(task_el);
+        });
+    });
+});

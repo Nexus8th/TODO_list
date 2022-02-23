@@ -78,7 +78,7 @@ main {
 
 .todo-list-container {
   position: relative;
-  width: 70%;
+  width: auto;
   height: auto;
   min-height: auto;
   border: 2px solid black;
@@ -185,6 +185,10 @@ input, button {
   padding: 1rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
+}
+
+#tasks .task .content {
+  flex: 1 1 0%;
 }
 
 #tasks .task .content .text {
