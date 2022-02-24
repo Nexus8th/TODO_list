@@ -83,7 +83,7 @@ main {
     width: auto;
     height: auto;
     min-height: auto;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: auto;
     margin-top: 5%;
     margin-bottom: 0%;
@@ -100,7 +100,6 @@ main {
     margin: 0;
     padding-top: 1.75rem;
     /* border: 2px solid black; */
-    
 }
 .todo-list-form {
     position: relative;
@@ -125,19 +124,24 @@ input, button {
     margin-right: 1rem;
     color: var(--light);
     font-size: 1.25rem;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0); 
 }
 .todo-list-input::placeholder {
     color: var(--gray);
 }
 .todo-list-input-btn {
-    color: var(--blue);
+    color: var(--darkest);
     font-size: 1.25rem;
     font-weight: 700;
-    background-image: linear-gradient(to right, var(--blue), var(--cyan));
+   /*  background-image: linear-gradient(to right, var(--blue), var(--cyan));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
     cursor: pointer;
     transition: 0.4s;
+    border-radius: 1rem;
+    background: #32D675;
+    padding: 0 15px 0 15px;
+    box-shadow: 4px 4px 4px rgb(0, 0, 0);  
 }
 .todo-list-input-btn:hover {
     opacity: 0.8;
@@ -164,9 +168,10 @@ input, button {
     display: flex;
     justify-content: space-between;
     background-color: var(--darker);
-    padding: 1rem;
+    padding: 0.65rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 #tasks .task .content {
     flex: 1 1 0%;
@@ -177,9 +182,10 @@ input, button {
     width: 100%;
     display: block;
     transition: 0.4s;
+    margin-top: 12px;
 }
 #tasks .task .content .text:not(:read-only) {
-    color: car(--blue);
+    color: white;
 }
 #tasks .task .actions {
     display: flex;
@@ -189,9 +195,13 @@ input, button {
     cursor: pointer;
     margin: 0 0.5rem;
     font-size: 1.125rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     transition: 0.4s;
+    padding: 0.7rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    box-shadow: 3px 3px 3px rgb(0, 0, 0); 
 }
 .task .actions button:hover {
     opacity: 0.8;
@@ -200,12 +210,19 @@ input, button {
     opacity: 0.6;
 }
 .task .actions .edit {
-    background-image: linear-gradient(to right, var(--blue), var(--cyan));
+ /*    background-image: linear-gradient(to right, var(--blue), var(--cyan));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+    background: #32D675;
+    border-radius: 1rem;
+    font-weight: 700;
+    color: #121A2B
+    
 }
 .task .actions .delete {
-    color: crimson;
+    color: white;
+    border-radius: 1rem;
+    background: #C61335;
 }
 .actions {
     position: relative;

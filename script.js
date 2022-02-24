@@ -1,6 +1,3 @@
-localStorage.setItem('form', 'input', 'list_el', () => {
-    const save = localStorage.getItem('form', 'input', 'list_el')
-})
 
 window.addEventListener('load', () => {
     const form = document.querySelector(".todo-list-form")
