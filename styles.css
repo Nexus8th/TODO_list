@@ -12,9 +12,10 @@
 
 /* ALL (*) */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Fira Sans', sans-serif;
 }
 
 /* HTML */
@@ -27,11 +28,16 @@ html {
 /* BODY */
 body {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 100vh;
   margin: 0;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
   background: var(--darkest);
   color: var(--light);
@@ -54,9 +60,15 @@ header {
 
 .header-title {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 2px solid black;
 }
 
@@ -83,32 +95,45 @@ main {
   min-height: auto;
   /* border: 2px solid black; */
   margin: auto;
-  margin-top: 5%;
+  margin-top: 8%;
   margin-bottom: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-radius: 1rem;
 }
 
 .todo-list-heading {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: auto;
   height: 6rem;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
-  padding-top: 1.75rem;
   /* border: 2px solid black; */
+  font-size: 3.25rem;
+  -webkit-text-decoration: underline #32D675 0.1rem;
+          text-decoration: underline #32D675 0.1rem;
 }
 
 .todo-list-form {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: auto;
   margin-left: 1rem;
   margin-right: 1rem;
   border-radius: 1rem;
-  margin-top: 1rem;
+  margin-top: 5rem;
 }
 
 input, button {
@@ -121,21 +146,28 @@ input, button {
 }
 
 .todo-list-input {
-  flex: 1 1 0%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
   background-color: var(--darker);
   padding: 1rem;
   border-radius: 1rem;
   margin-right: 1rem;
   color: var(--light);
   font-size: 1.25rem;
-  box-shadow: 2px 2px 2px black;
+  -webkit-box-shadow: 2px 2px 2px black;
+          box-shadow: 2px 2px 2px black;
 }
 
-.todo-list-input::-moz-placeholder {
+.todo-list-input::-webkit-input-placeholder {
   color: var(--gray);
 }
 
 .todo-list-input:-ms-input-placeholder {
+  color: var(--gray);
+}
+
+.todo-list-input::-ms-input-placeholder {
   color: var(--gray);
 }
 
@@ -148,14 +180,16 @@ input, button {
   font-size: 1.25rem;
   font-weight: 700;
   /*  background-image: linear-gradient(to right, var(--blue), var(--cyan));
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
   cursor: pointer;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 1rem;
   background: #32D675;
   padding: 0 15px 0 15px;
-  box-shadow: 4px 4px 4px black;
+  -webkit-box-shadow: 4px 4px 4px black;
+          box-shadow: 4px 4px 4px black;
 }
 
 .todo-list-input-btn:hover {
@@ -168,8 +202,13 @@ input, button {
 
 .todo-list {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 1rem;
 }
 
@@ -184,17 +223,26 @@ input, button {
 
 #tasks .task {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: var(--darker);
   padding: 0.65rem;
   border-radius: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 2px 2px 2px black;
+  -webkit-box-shadow: 2px 2px 2px black;
+          box-shadow: 2px 2px 2px black;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
 #tasks .task .content {
-  flex: 1 1 0%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
 }
 
 #tasks .task .content .text {
@@ -202,6 +250,7 @@ input, button {
   font-size: 1.125rem;
   width: 100%;
   display: block;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
   margin-top: 12px;
 }
@@ -215,6 +264,8 @@ input, button {
 }
 
 #tasks .task .actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 -0.5rem;
 }
@@ -225,11 +276,13 @@ input, button {
   font-size: 1.125rem;
   font-weight: 600;
   text-transform: uppercase;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
   padding: 0.7rem;
   border-radius: 1rem;
   margin-right: 1rem;
-  box-shadow: 3px 3px 3px black;
+  -webkit-box-shadow: 3px 3px 3px black;
+          box-shadow: 3px 3px 3px black;
 }
 
 .task .actions button:hover {
@@ -242,8 +295,8 @@ input, button {
 
 .task .actions .edit {
   /*    background-image: linear-gradient(to right, var(--blue), var(--cyan));
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
   background: #32D675;
   border-radius: 1rem;
   font-weight: 700;
@@ -258,7 +311,24 @@ input, button {
 
 .actions {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+}
+
+.delete:active {
+  -webkit-transform: translateY(0.2rem) rotate(0deg);
+          transform: translateY(0.2rem) rotate(0deg);
+}
+
+.todo-list-input-btn:active {
+  -webkit-transform: translateY(0.2rem) rotate(0deg);
+          transform: translateY(0.2rem) rotate(0deg);
+}
+
+.edit:active {
+  -webkit-transform: translateY(0.2rem) rotate(0deg);
+          transform: translateY(0.2rem) rotate(0deg);
 }
 
 /* FOOTER */
@@ -291,6 +361,8 @@ footer {
   position: relative;
   width: auto;
   height: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   list-style-type: none;
 }
@@ -299,4 +371,5 @@ footer {
   position: relative;
   width: auto;
   height: auto;
-}/*# sourceMappingURL=styles.css.map */
+}
+/*# sourceMappingURL=styles.css.map */
