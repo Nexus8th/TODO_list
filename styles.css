@@ -276,6 +276,21 @@ input, button {
   transform: translateY(0.2rem) rotate(0deg);
 }
 
+/* TEXT INTRO ASIDE */
+.text-intro {
+  /* border: 2px solid white; */
+  position: absolute;
+  display: flex;
+  top: 30%;
+  left: 3%;
+}
+
+.text-intro > p {
+  font-style: italic;
+  font-weight: 800;
+  font-size: 1.75rem;
+}
+
 /* FOOTER */
 footer {
   position: relative;
