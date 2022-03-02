@@ -263,7 +263,7 @@ input, button {
 }
 
 
-/* TEXT INTRO ASIDE */
+                /* TEXT INTRO ASIDE */
 .text-intro {
     /* border: 2px solid white; */
     position: absolute;
@@ -272,12 +272,37 @@ input, button {
     left: 3%;
     width: auto;
     height: auto;
+    max-width: 18rem;
 }
 .text-intro > p {
     font-style: italic;
     font-weight: 800;
     font-size: 1.65rem;
-    text-shadow: black 4px 4px
+    text-shadow: black 4px 4px;
+}
+.text-popup {
+    display: none;
+}
+@media (max-width: 1400px){
+    .text-intro {
+        display: none;
+    }
+    .text-popup {
+        display: block;
+        margin-left: 4rem;
+        margin-top: 9rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 25%;
+        background-color: white;
+        color: black;
+        font-size: 1.65rem;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 3px 3px black;
+    }
 }
 
 
