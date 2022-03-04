@@ -2,7 +2,7 @@
 window.addEventListener('load', () => {
     const form = document.querySelector(".todo-list-form")
     const input = document.querySelector(".todo-list-input")
-    const list_el = document.querySelector("#tasks")
+    const list_el = document.querySelector("#tasks");
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -11,8 +11,7 @@ window.addEventListener('load', () => {
         
         const task_el = document.createElement("div");
         task_el.classList.add("task");
-        saveLocalTasks(input.value);
-
+        
         const task_content_el = document.createElement("div");
         task_content_el.classList.add("content");
         task_el.appendChild(task_content_el);
@@ -39,7 +38,7 @@ window.addEventListener('load', () => {
         task_el.appendChild(task_actions_el);
         list_el.appendChild(task_el);
         input.value = "";
-
+        
         task_edit_el.addEventListener('click', () => {
             if (task_edit_el.innerText.toLowerCase() == "editer") {
                 task_input_el.removeAttribute("readonly");
@@ -54,15 +53,12 @@ window.addEventListener('load', () => {
         task_delete_el.addEventListener('click', () => {
             list_el.removeChild(task_el);
         });
+
+        tasks.push(task);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
     });
 });
-function saveLocalTasks(task) {
-    let tasks;
-    if(localStorage.getItem(tasks) === null) {
-        tasks = [];
-    } else {
-        tasks = JSON.parse(localStorage.getItem("tasks"));
-    }
-    tasks.push(task);
-    localStorage.setItem("tasks", JSON.stringify(tasks));   
-}
+let tasks;
+tasks = JSON.parse(localStorage.getItem('tasks')) ?? [];
+
+/* localStorage.clear() */
